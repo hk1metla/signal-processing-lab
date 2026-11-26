@@ -13,7 +13,7 @@ with tempfile.TemporaryDirectory() as d:
             if extreme:samples[:4,:]=np.array([-32768,-1,0,32767],dtype=np.int16)[:,None]
             if channels==1:samples=samples[:,0]
             wavfile.write(d/'in.wav',16000,samples)
-            for k in (2,4,8,12):
+            for k in (2,4,8,12,None):
                 encode_wav_to_ex2(str(d/'in.wav'),k,str(d/'out.ex2'))
                 decode_ex2_to_wav(str(d/'out.ex2'),str(d/'decoded.wav'))
                 sr,recovered=wavfile.read(d/'decoded.wav')
