@@ -1,4 +1,3 @@
-numpy>=1.24,<3
-scipy>=1.10,<2
+-r requirements-codec.txt
 matplotlib>=3.7,<4
 jupyterlab>=4,<5

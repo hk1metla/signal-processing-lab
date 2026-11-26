@@ -18,7 +18,7 @@ A collection of audio algorithms: **lossless Rice coding, FFT analysis, demodula
 ## Start with the verified codec
 
 ```bash
-python -m pip install -r requirements.txt
+python -m pip install -r requirements-codec.txt
 python smoke_test.py
 python rice_codec.py encode input.wav output.ex2
 python rice_codec.py decode output.ex2 decoded.wav
@@ -43,6 +43,7 @@ A ratio below 1 means a smaller file. The sine wave compresses, while nearly uni
 ## Explore the notebooks
 
 ```bash
+python -m pip install -r requirements.txt
 jupyter lab notebooks
 ```
 
@@ -63,7 +64,4 @@ The separate visualisation/voice-control source still expects sound files and a 
 
 The recovered script compares filtered/unfiltered audio and computes word error rate against a transcription file. It expects compatible DeepSpeech model/scorer files for EN, ES and IT, 16 kHz audio, and the directory layout documented in `speech-recognition/README.md`. Those weights, personal recordings and third-party audio are not published. Full ASR execution was not reproduced.
 
-
-## Source and maintenance
-
-Recovered implementations from Shahzaib Naeem’s project backups, maintained for public review. See [SOURCES.md](SOURCES.md) for origins, third-party components and preparation changes. Run records describe software checks, not independently validated research outcomes.
+Project backups, external libraries and media dependencies are documented in [SOURCES.md](SOURCES.md).
