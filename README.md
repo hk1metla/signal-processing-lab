@@ -63,5 +63,3 @@ The separate visualisation/voice-control source still expects sound files and a 
 ## Speech recognition
 
 The recovered script compares filtered/unfiltered audio and computes word error rate against a transcription file. It expects compatible DeepSpeech model/scorer files for EN, ES and IT, 16 kHz audio, and the directory layout documented in `speech-recognition/README.md`. Those weights, personal recordings and third-party audio are not published. Full ASR execution was not reproduced.
-
-Project backups, external libraries and media dependencies are documented in [SOURCES.md](SOURCES.md).
